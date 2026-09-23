@@ -10,7 +10,7 @@ permissions:
 jobs:
   aer-verify:
     name: AER Verify Gate
-    runs-on: ubuntu-24.04
+    runs-on: self-hosted
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -18,16 +18,8 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Check out AER Verify Action
-        uses: actions/checkout@v4
-        with:
-          repository: frank8ai/aer-runtime
-          ref: v0.1.0-beta.1
-          path: .aer-action
-          persist-credentials: false
-
       - name: Run AER Verify
-        uses: ./.aer-action/action
+        uses: frank8ai/aer-verify-action@v0.1.0-beta.1
         with:
           evidence-path: artifacts/aer/acceptance-evidence.json
           brief-path: artifacts/aer/acceptance-brief.md
