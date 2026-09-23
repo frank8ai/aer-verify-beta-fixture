@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "repoKey": "frank8ai/aer-verify-beta-fixture",
+  "environment": {"runtime": "python", "requiredVersion": "3.12", "lockFile": "requirements.txt"},
+  "gates": [{"id": "gate-1", "command": "python -c \"assert 1==1\"", "required": true, "tier": "cheap"}],
+  "baselinePolicy": {"tierDefault": "cheap"}
+}
