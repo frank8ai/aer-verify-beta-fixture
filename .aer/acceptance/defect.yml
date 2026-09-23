@@ -1,7 +1,0 @@
-schemaVersion: acceptance-contract/v0
-protocol: EXPLICIT_SCRIPT
-condition: python reproduce.py
-baselineExpected: DEFECT_OBSERVED
-candidateExpected: DEFECT_ABSENT
-source: BASE_BRANCH_TRUSTED
-description: Verify calculator addition defect cure
